@@ -1,7 +1,8 @@
 import 'dart:convert';
+
+import 'package:final_app/components/cutsom.dart';
 import 'package:final_app/models/formval.dart';
 import 'package:http/http.dart' as http;
-import 'package:final_app/components/cutsom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 class BloodAnalysis extends StatefulWidget {
@@ -14,9 +15,8 @@ class _BloodAnalysisState extends State<BloodAnalysis> with TickerProviderStateM
   bool press = true;
   final GlobalKey<FormState> _formKeyValue =  GlobalKey<FormState>();
   FormVal formVal = FormVal();
-  Future fetchData(name,identity,age,bmi,glucose,insuline,homa,leptin,adiponcetin,resistine,mcp,context) async {
+  Future uploadData(name,identity,age,bmi,glucose,insuline,homa,leptin,adiponcetin,resistine,mcp,context) async {
     var url = Uri.parse('https://bloodanalysisdiagnose.herokuapp.com/users/');
-    // final url = 'https://bloodanalysisdiagnose.herokuapp.com/users/';
     final http.Response response = await http.post( url,
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
@@ -131,7 +131,7 @@ class _BloodAnalysisState extends State<BloodAnalysis> with TickerProviderStateM
                               // print('Name :${formVal.age}');
                               // print('Phone :${formVal.name}');
                               // print('Email :${formVal.mcp}');
-                              fetchData(formVal.name,formVal.identitycard,formVal.age,formVal.bmi,formVal.glucouse,formVal.insuline,formVal.homa,formVal.leptin,formVal.adiponcetin,formVal.resistiin,formVal.mcp,context);
+                              uploadData(formVal.name,formVal.identitycard,formVal.age,formVal.bmi,formVal.glucouse,formVal.insuline,formVal.homa,formVal.leptin,formVal.adiponcetin,formVal.resistiin,formVal.mcp,context);
 
                               // CustomTextField().controller.clear();
 

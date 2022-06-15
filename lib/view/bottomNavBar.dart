@@ -1,8 +1,9 @@
 
-import 'package:final_app/view/home.dart';
-import 'package:final_app/view/search.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+
+import 'home.dart';
+import 'search.dart';
 
 class App extends StatefulWidget {
 

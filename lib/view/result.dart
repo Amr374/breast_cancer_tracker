@@ -17,13 +17,13 @@ class Result extends StatefulWidget {
 class _ResultState extends State<Result> with TickerProviderStateMixin{
   bool isPressed = false ;
   List<Model> elements;
-  Future<List<Model>> fetchShops() async {
+  Future<List<Model>> fetchResults() async {
     var url = Uri.parse('https://bloodanalysisdiagnose.herokuapp.com/users/');
     final response = await http.get(url);
     if (response.statusCode == 200) {
-      List<Model> Shops = modelFromJson(response.body);
-      elements = [...Shops];
-      return Shops;
+      List<Model> results = modelFromJson(response.body);
+      elements = [...results];
+      return results;
     } else {
 
       throw Exception('EXCEPTION');
@@ -140,7 +140,7 @@ class _ResultState extends State<Result> with TickerProviderStateMixin{
 
     return Scaffold(
         body:  FutureBuilder<List<Model>>(
-          future: fetchShops(),
+          future: fetchResults(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return         Container(
