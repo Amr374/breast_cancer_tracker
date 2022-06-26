@@ -1,16 +1,14 @@
-# final_app
+# Breast Cancer Tracker
 
 A new Flutter application.
 
 ## Getting Started
+The application helps breast cancer patients and doctors in this specialty determine if there is cancer or not by
+taking the results of the analyzes and submitting them to an artificial intelligence system, then displaying the result
+in PDF.
+Tools:(Http, PDF Generation, Firebase Authentication).
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![DiagnoseScreen](https://user-images.githubusercontent.com/74936462/175803683-b9529e09-c83c-4492-938a-0b48cf0b7f9b.jpg)
+![HomeScreen](https://user-images.githubusercontent.com/74936462/175803688-1ead7683-24bf-4282-a7f5-be6d3c89fff6.jpg)
+![ResultScreen](https://user-images.githubusercontent.com/74936462/175803690-2f58dfb4-73af-430a-ad66-a4f62682df4a.jpg)
+![SearchScreen](https://user-images.githubusercontent.com/74936462/175803692-c1d8eed6-5ffa-4d85-a6ca-18cf4b51c75c.jpg)
